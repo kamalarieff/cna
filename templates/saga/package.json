@@ -31,6 +31,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/next": "^8.0.3",
+    "@types/react": "^16.8.13",
+    "@types/redux-saga": "^0.10.5",
     "babel-eslint": "7.2.3",
     "babel-helper-annotate-as-pure": "7.0.0-beta.2",
     "eslint": "4.1.1",
