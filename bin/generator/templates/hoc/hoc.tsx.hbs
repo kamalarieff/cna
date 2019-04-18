@@ -1,0 +1,35 @@
+/**
+*
+* with{{ properCase name }}
+*
+*/
+
+import React from 'react';
+import styled from 'styled-components';
+import { NextContext } from 'next';
+
+interface CustomComponent {
+  getInitialProps(context: NextContext): void;
+}
+
+type Component = React.ComponentClass & CustomComponent;
+
+const with{{ properCase name }} = (Child: Component) => {
+
+  type Props = {};
+
+  type State = {};
+
+  class WrappedComponent extends React.Component<Props, State> {
+    static getInitialProps (context) {
+      return Child.getInitialProps(context);
+    }
+
+    render () {
+      return <Child {...this.props} />;
+    }
+  }
+  return WrappedComponent;
+}
+
+export default with{{ properCase name }};

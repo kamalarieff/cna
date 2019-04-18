@@ -15,8 +15,8 @@ module.exports = {
             : true;
         }
         return 'The name is required';
-      }
-    }
+      },
+    },
   ],
   actions: function(data) {
     const pathToContainer = path.join(process.cwd(), 'hocs');
@@ -24,12 +24,12 @@ module.exports = {
     const actions = [
       {
         type: 'add',
-        path: path.join(pathToContainer, 'with{{properCase name}}.js'),
-        templateFile: path.join(__dirname, 'hoc.js.hbs'),
-        abortOnFail: true
-      }
+        path: path.join(pathToContainer, 'with{{properCase name}}.tsx'),
+        templateFile: path.join(__dirname, 'hoc.tsx.hbs'),
+        abortOnFail: true,
+      },
     ];
 
     return actions;
-  }
+  },
 };
