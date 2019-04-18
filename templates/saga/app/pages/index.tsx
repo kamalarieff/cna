@@ -1,9 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Home from '~/app/containers/Home';
-import { fetchData } from '~/app/containers/Home/actions';
+import Home from '../containers/Home';
+import { fetchData } from '../containers/Home/actions';
 
-class Index extends React.Component {
+type Props = {
+  dispatch: Dispatch;
+  query: {};
+};
+
+type State = {};
+
+class Index extends React.Component<Props, State> {
   static async getInitialProps(context) {
     const { store, req, isServer, res, query } = context;
 

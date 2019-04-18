@@ -1,8 +1,12 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { APPLE_METAS_LINKS } from '~/app/utils/constants';
+import { APPLE_METAS_LINKS } from '../utils/constants';
 
-export default class ServerDocument extends Document {
+type Props = {
+  customValue: string;
+}
+
+export default class ServerDocument extends Document<Props> {
   renderAppleMetas() {
     const { metas } = APPLE_METAS_LINKS;
     return metas.map((item, index) => <meta key={index} {...item} />);
