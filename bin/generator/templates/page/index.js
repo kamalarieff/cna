@@ -3,7 +3,7 @@ const componentExists = require('../../../utils/componentExists');
 
 const COMPONENT_TYPE = {
   STATELESS: 'Stateless Component',
-  STATEFUL: 'Stateful Component'
+  STATEFUL: 'Stateful Component',
 };
 
 module.exports = {
@@ -20,14 +20,14 @@ module.exports = {
             : true;
         }
         return 'The name is required';
-      }
+      },
     },
     {
       type: 'confirm',
       name: 'wantRedux',
       default: true,
-      message: 'Do you want to add redux?'
-    }
+      message: 'Do you want to add redux?',
+    },
   ],
   actions: function(data) {
     const pathToContainer = path.join(process.cwd(), 'pages');
@@ -35,12 +35,12 @@ module.exports = {
     const actions = [
       {
         type: 'add',
-        path: path.join(pathToContainer, `${data.name.toLowerCase()}.js`),
-        templateFile: path.join(__dirname, 'page.js.hbs'),
-        abortOnFail: true
-      }
+        path: path.join(pathToContainer, `${data.name.toLowerCase()}.tsx`),
+        templateFile: path.join(__dirname, 'page.tsx.hbs'),
+        abortOnFail: true,
+      },
     ];
 
     return actions;
-  }
+  },
 };
