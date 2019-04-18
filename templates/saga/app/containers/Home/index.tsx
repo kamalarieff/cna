@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Article from '~/app/components/Article';
+import Article from '../../components/Article';
 import messages from './messages';
 
 const BottomZone = styled.div`
@@ -20,7 +20,27 @@ const A = styled.a`
   text-decoration: none;
 `;
 
-class Home extends React.Component {
+type Props = {
+  home: {
+    data: [
+      {
+        points: number;
+        title: string;
+        time_ago: string;
+        url: string;
+        comments_count: number;
+        user: string;
+      }
+    ];
+  };
+  query: {
+    page: number;
+  };
+}
+
+type State = {}
+
+class Home extends React.Component<Props, State> {
   render() {
     const {
       home: { data },

@@ -1,11 +1,26 @@
 import { FETCH_DATA, FETCH_DATA_SUCCESS, FETCH_DATA_FAIL } from './constants';
 
-const initState = {
+type State = {
+  fetching: Boolean;
+  data: [];
+};
+
+const initState: State = {
   fetching: false,
   data: [],
 };
 
-export default function home(state = initState, action) {
+type actionType = {
+  type: string;
+}
+
+type actionPayload = {
+  payload: { response };
+}
+
+type action = actionType & actionPayload;
+
+export default function home(state = initState, action: action) {
   switch (action.type) {
     case FETCH_DATA: {
       return {
