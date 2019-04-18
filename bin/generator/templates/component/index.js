@@ -4,7 +4,7 @@ const componentExists = require('../../../utils/componentExists');
 const COMPONENT_TYPE = {
   STATELESS: 'Stateless Component',
   PURE: 'Pure Component',
-  STATEFUL: 'Stateful Component'
+  STATEFUL: 'Stateful Component',
 };
 
 module.exports = {
@@ -18,8 +18,8 @@ module.exports = {
       choices: () => [
         COMPONENT_TYPE.STATEFUL,
         COMPONENT_TYPE.STATELESS,
-        COMPONENT_TYPE.PURE
-      ]
+        COMPONENT_TYPE.PURE,
+      ],
     },
     {
       type: 'input',
@@ -32,32 +32,32 @@ module.exports = {
             : true;
         }
         return 'The name is required';
-      }
+      },
     },
     {
       type: 'confirm',
       name: 'wantMessages',
       default: true,
-      message: 'Do you want to add messages?'
-    }
+      message: 'Do you want to add messages?',
+    },
   ],
   actions: function(data) {
     let template;
     switch (data.type) {
       case 'Stateless Component': {
-        template = 'component.stateless.js.hbs';
+        template = 'component.stateless.tsx.hbs';
         break;
       }
       case 'Pure Component': {
-        template = 'component.pure.js.hbs';
+        template = 'component.pure.tsx.hbs';
         break;
       }
       case 'Stateful Component': {
-        template = 'component.js.hbs';
+        template = 'component.tsx.hbs';
         break;
       }
       default: {
-        template = 'component.stateless.js.hbs';
+        template = 'component.stateless.tsx.hbs';
       }
     }
     template = path.join(__dirname, template);
@@ -69,18 +69,18 @@ module.exports = {
     const actions = [
       {
         type: 'add',
-        path: path.join(pathToComponent, 'index.js'),
+        path: path.join(pathToComponent, 'index.tsx'),
         templateFile: template,
-        abortOnFail: true
+        abortOnFail: true,
       },
       {
         type: 'add',
-        path: path.join(pathToComponent, 'messages.js'),
-        templateFile: path.join(__dirname, 'messages.js.hbs'),
-        abortOnFail: true
-      }
+        path: path.join(pathToComponent, 'messages.ts'),
+        templateFile: path.join(__dirname, 'messages.ts.hbs'),
+        abortOnFail: true,
+      },
     ];
 
     return actions;
-  }
+  },
 };

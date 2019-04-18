@@ -1,0 +1,34 @@
+/**
+*
+* {{ properCase name }}
+*
+*/
+
+import React from 'react';
+import styled from 'styled-components';
+
+{{#if wantMessages}}
+import messages from './messages';
+
+{{/if}}
+const H1 = styled.h1`
+  color: red;
+`;
+
+type Props = {}
+
+type State = {}
+
+class {{ properCase name }} extends React.Component<Props, State> {
+  render () {
+    return (
+      <div>
+      {{#if wantMessages}}
+        <H1>{messages.greeting} Component</H1>
+      {{/if}}
+      </div>
+    );
+  }
+}
+
+export default {{ properCase name }};
