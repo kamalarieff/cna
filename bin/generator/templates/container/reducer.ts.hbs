@@ -20,7 +20,7 @@ type actionPayload = {
 
 type action = actionType & actionPayload;
 
-function {{ lowerCase name }} (state = initialState, action: action) {
+export function reducer (state = initialState, action: action) {
   switch (action.type) {
     case DEFAULT_ACTION:
       return {...state};
@@ -28,5 +28,3 @@ function {{ lowerCase name }} (state = initialState, action: action) {
       return state;
   }
 }
-
-export default {{ lowerCase name }};

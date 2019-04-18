@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { Dispatch } from 'redux';
 
 {{#if wantMessages}}
-import messages from './messages';
+import { messages } from './messages';
 
 {{/if}}
 {{#if wantRedux}}
@@ -27,7 +27,7 @@ type Props = {
 
 type State = {};
 
-class {{ properCase name }} extends React.{{{ typeComponent }}}<Props, State> {
+class Component extends React.{{{ typeComponent }}}<Props, State> {
   componentDidMount () {
     const { dispatch } = this.props;
     dispatch(defaultAction());
@@ -59,7 +59,14 @@ export function mapDispatchToProps (dispatch) {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)({{ properCase name }});
+export const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Component);
+
 {{else}}
-export default {{ properCase name }};
+export { Component };
+
 {{/if}}
+export * from './constants';
+export * from './actions';
+export * from './messages';
+export * from './reducer';
+// export * from './saga';
