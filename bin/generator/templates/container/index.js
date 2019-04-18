@@ -15,27 +15,27 @@ module.exports = {
             : true;
         }
         return 'The name is required';
-      }
+      },
     },
     {
       type: 'list',
       name: 'typeComponent',
       message: 'Select type of component: ',
       default: 'Component',
-      choices: () => ['Component', 'PureComponent']
+      choices: () => ['Component', 'PureComponent'],
     },
     {
       type: 'confirm',
       name: 'wantRedux',
       default: true,
-      message: 'Do you want to add redux?'
+      message: 'Do you want to add redux?',
     },
     {
       type: 'confirm',
       name: 'wantMessages',
       default: true,
-      message: 'Do you want to add messages?'
-    }
+      message: 'Do you want to add messages?',
+    },
   ],
   actions: function(data) {
     const pathToContainer = path.join(
@@ -46,36 +46,36 @@ module.exports = {
     const actions = [
       {
         type: 'add',
-        path: path.join(pathToContainer, 'index.js'),
-        templateFile: path.join(__dirname, 'container.js.hbs'),
-        abortOnFail: true
+        path: path.join(pathToContainer, 'index.tsx'),
+        templateFile: path.join(__dirname, 'container.tsx.hbs'),
+        abortOnFail: true,
       },
       {
         type: 'add',
-        path: path.join(pathToContainer, 'actions.js'),
-        templateFile: path.join(__dirname, 'actions.js.hbs'),
-        abortOnFail: true
+        path: path.join(pathToContainer, 'actions.ts'),
+        templateFile: path.join(__dirname, 'actions.ts.hbs'),
+        abortOnFail: true,
       },
       {
         type: 'add',
-        path: path.join(pathToContainer, 'constants.js'),
-        templateFile: path.join(__dirname, 'constants.js.hbs'),
-        abortOnFail: true
+        path: path.join(pathToContainer, 'constants.ts'),
+        templateFile: path.join(__dirname, 'constants.ts.hbs'),
+        abortOnFail: true,
       },
       {
         type: 'add',
-        path: path.join(pathToContainer, 'messages.js'),
-        templateFile: path.join(__dirname, 'messages.js.hbs'),
-        abortOnFail: true
+        path: path.join(pathToContainer, 'messages.ts'),
+        templateFile: path.join(__dirname, 'messages.ts.hbs'),
+        abortOnFail: true,
       },
       {
         type: 'add',
-        path: path.join(pathToContainer, 'reducer.js'),
-        templateFile: path.join(__dirname, 'reducer.js.hbs'),
-        abortOnFail: true
-      }
+        path: path.join(pathToContainer, 'reducer.ts'),
+        templateFile: path.join(__dirname, 'reducer.ts.hbs'),
+        abortOnFail: true,
+      },
     ];
 
     return actions;
-  }
+  },
 };

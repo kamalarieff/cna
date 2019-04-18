@@ -1,0 +1,32 @@
+/*
+ *
+ * {{ properCase name }} reducer
+ *
+ */
+ 
+import { DEFAULT_ACTION } from './constants';
+
+type State = {}
+
+const initialState: State = {};
+
+type actionType = {
+  type: string;
+}
+
+type actionPayload = {
+  payload: {};
+}
+
+type action = actionType & actionPayload;
+
+function {{ lowerCase name }} (state = initialState, action: action) {
+  switch (action.type) {
+    case DEFAULT_ACTION:
+      return {...state};
+    default:
+      return state;
+  }
+}
+
+export default {{ lowerCase name }};
