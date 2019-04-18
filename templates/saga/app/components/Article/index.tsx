@@ -30,7 +30,18 @@ const BasicInfo = styled.p`
   color: #666;
 `;
 
-function Article(props) {
+type Props = {
+  key: number;
+  title: string;
+  url: string;
+  point: string;
+  postTime: string;
+  commentCount: number;
+  user: string;
+  order: string;
+}
+
+const Article = (props: Props) => {
   const { title, url, point, postTime, commentCount, user, order } = props;
   return (
     <ArticleWrapper>

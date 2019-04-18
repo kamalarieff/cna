@@ -29,7 +29,7 @@ const Title = styled.h2`
   margin: 0;
 `;
 
-function Header() {
+const Header = () => {
   return (
     <HeaderWrapper>
       <nav>
