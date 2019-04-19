@@ -20,7 +20,7 @@ type actionPayload = {
 
 type action = actionType & actionPayload;
 
-export function reducer(state = initState, action: action) {
+export default function reducer(state = initState, action: action) {
   switch (action.type) {
     case FETCH_DATA: {
       return {
