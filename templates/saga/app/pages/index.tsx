@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Component as Home } from '../containers/Home';
 import { fetchData } from '../containers/Home/actions';
+import { Dispatch } from 'redux';
 
 type Props = {
   dispatch: Dispatch;
