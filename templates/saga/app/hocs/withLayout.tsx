@@ -1,4 +1,4 @@
-import '../assets/styles/globalStyles';
+import GlobalStyle from '../assets/styles/globalStyles';
 import React from 'react';
 import styled from 'styled-components';
 import { Component as Header } from '../components/Header';
@@ -21,6 +21,7 @@ function withLayout(Child: React.ComponentClass) {
           <MainWrapper>
             <Child {...this.props} />
           </MainWrapper>
+          <GlobalStyle />
         </div>
       );
     }
