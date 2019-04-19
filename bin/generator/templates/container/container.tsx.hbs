@@ -59,7 +59,7 @@ export function mapDispatchToProps (dispatch) {
   }
 };
 
-export const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Component);
+export const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 {{else}}
 export { Component };
