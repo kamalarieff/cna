@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Article from '../../components/Article';
-import messages from './messages';
+import { Component as Article } from '../../components/Article';
+import { messages } from './messages';
 
 const BottomZone = styled.div`
   margin-top: 30px;
@@ -40,7 +40,7 @@ type Props = {
 
 type State = {}
 
-class Home extends React.Component<Props, State> {
+class Component extends React.Component<Props, State> {
   render() {
     const {
       home: { data },
@@ -76,4 +76,8 @@ class Home extends React.Component<Props, State> {
   }
 }
 
-export default Home;
+export { Component };
+export * from './constants';
+export * from './actions';
+export * from './messages';
+export * from './reducer'

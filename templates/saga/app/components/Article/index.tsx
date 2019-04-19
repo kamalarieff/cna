@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import messages from './messages';
+import { messages } from './messages';
 
 const ArticleWrapper = styled.article`
   margin-bottom: 15px;
@@ -41,7 +41,7 @@ type Props = {
   order: string;
 }
 
-const Article = (props: Props) => {
+export const Component = (props: Props) => {
   const { title, url, point, postTime, commentCount, user, order } = props;
   return (
     <ArticleWrapper>
@@ -62,4 +62,4 @@ const Article = (props: Props) => {
   );
 }
 
-export default Article;
+export * from './messages';

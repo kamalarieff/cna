@@ -1,6 +1,6 @@
 import { DEFAULT_LANG } from '../../utils/constants';
 
-const messages = {
+export const messages = {
   en: {
     hn: 'Hacker News',
   },
@@ -8,5 +8,3 @@ const messages = {
     hn: 'Hacker News',
   },
 }[DEFAULT_LANG];
-
-export default messages;

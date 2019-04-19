@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import messages from './messages';
+import { messages } from './messages';
 
 const HeaderWrapper = styled.header`
   padding: 5px 10px;
@@ -29,7 +29,7 @@ const Title = styled.h2`
   margin: 0;
 `;
 
-const Header = () => {
+export const Component = () => {
   return (
     <HeaderWrapper>
       <nav>
@@ -48,4 +48,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export * from './messages';

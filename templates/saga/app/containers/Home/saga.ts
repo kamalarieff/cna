@@ -23,5 +23,3 @@ function* fetchData({ payload: { query } }) {
 export function* root() {
   yield takeLatest(FETCH_DATA, fetchData);
 }
-
-export default root;

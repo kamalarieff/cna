@@ -1,6 +1,6 @@
 import { DEFAULT_LANG } from '../../utils/constants';
 
-const messages = {
+export const messages = {
   en: {
     pointBy: 'points by ',
     comment: 'comments',
@@ -10,5 +10,3 @@ const messages = {
     comment: 'bình luận',
   },
 }[DEFAULT_LANG];
-
-export default messages;
