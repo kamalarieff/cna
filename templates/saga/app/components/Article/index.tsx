@@ -34,12 +34,12 @@ type Props = {
   key: number;
   title: string;
   url: string;
-  point: string;
+  point: number;
   postTime: string;
   commentCount: number;
   user: string;
-  order: string;
-}
+  order: number;
+};
 
 export const Component = (props: Props) => {
   const { title, url, point, postTime, commentCount, user, order } = props;
@@ -60,6 +60,6 @@ export const Component = (props: Props) => {
       </BasicInfo>
     </ArticleWrapper>
   );
-}
+};
 
 export * from './messages';
