@@ -19,7 +19,7 @@ type Props = {}
 
 type State = {}
 
-class {{ properCase name }} extends React.Component<Props, State> {
+export class Component extends React.Component<Props, State> {
   render () {
     return (
       <div>
@@ -31,4 +31,4 @@ class {{ properCase name }} extends React.Component<Props, State> {
   }
 }
 
-export default {{ properCase name }};
+export * from './messages';
