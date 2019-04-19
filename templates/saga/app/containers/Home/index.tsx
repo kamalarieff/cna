@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { Component as Article } from '../../components/Article';
+import Article from '../../components/Article';
 import messages from './messages';
 import { fetchData } from './actions';
 import reducer from './reducer';

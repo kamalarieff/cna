@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Component as Header } from '../app/components/Header';
+import Header from '../app/components/Header';
 
 describe('test', () => {
   it('test', () => {
