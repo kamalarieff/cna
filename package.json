@@ -1,6 +1,6 @@
 {
-  "name": "cna",
-  "version": "1.0.12",
+  "name": "@mudahmy/mudah-cna",
+  "version": "1.0.15",
   "description": "CLI for creating next.js apps boilerplate",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,11 @@
     ]
   },
   "bin": {
-    "cna": "./bin/index.js"
+    "mudah-cna": "./bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChoTotOSS/cna.git"
+    "url": "https://gitlab2.mudah.my/kamal/mudah-cna"
   },
   "keywords": [
     "nextjs",
@@ -29,16 +29,17 @@
     "redux",
     "reactjs",
     "flux",
-    "styled-components"
+    "styled-components",
+    "typescript"
   ],
   "authors": [
-    "David Nguyen <dzungnguyen179@gmail.com> (https://github.com/davidnguyen179)"
+    "Kamal Arieff <kamal.arieff@mudah.my> (https://github.com/davidnguyen179)"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChoTotOSS/cna/issues"
+    "url": "https://gitlab2.mudah.my/kamal/mudah-cna/issues"
   },
-  "homepage": "https://chototoss.github.io/cna/",
+  "homepage": "https://gitlab2.mudah.my/kamal/mudah-cna",
   "engines": {
     "node": ">=6"
   },
@@ -53,6 +54,5 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.2.2",
     "prettier": "^1.6.1"
-  },
-  "npmName": "cna"
+  }
 }

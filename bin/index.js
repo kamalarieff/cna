@@ -113,7 +113,7 @@ if (!process.argv[2]) {
 }
 
 if (invalid) {
-  spawn('cna', ['--help'], {
+  spawn('mudah-cna', ['--help'], {
     cwd: process.cwd(),
     stdio: 'inherit',
   }).on('exit', function() {
