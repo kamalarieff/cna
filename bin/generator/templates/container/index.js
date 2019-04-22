@@ -74,6 +74,12 @@ module.exports = {
         templateFile: path.join(__dirname, 'reducer.ts.hbs'),
         abortOnFail: true,
       },
+      {
+        type: 'add',
+        path: path.join(pathToContainer, 'types.ts'),
+        templateFile: path.join(__dirname, 'types.ts.hbs'),
+        abortOnFail: true,
+      },
     ];
 
     return actions;

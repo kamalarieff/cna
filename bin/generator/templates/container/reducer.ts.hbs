@@ -5,22 +5,11 @@
  */
  
 import { DEFAULT_ACTION } from './constants';
+import { {{ properCase name }}Actions, IState } from './types';
 
-type State = {}
+const initialState: IState = {};
 
-const initialState: State = {};
-
-type actionType = {
-  type: string;
-}
-
-type actionPayload = {
-  payload: {};
-}
-
-type action = actionType & actionPayload;
-
-export default function reducer (state = initialState, action: action) {
+export default function reducer (state: IState = initialState, action: {{ properCase name }}Actions) {
   switch (action.type) {
     case DEFAULT_ACTION:
       return {...state};
