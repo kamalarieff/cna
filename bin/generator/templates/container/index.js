@@ -40,7 +40,7 @@ module.exports = {
   actions: function(data) {
     const pathToContainer = path.join(
       process.cwd(),
-      'containers/{{properCase name}}'
+      'app/containers/{{properCase name}}'
     );
 
     const actions = [
@@ -72,6 +72,12 @@ module.exports = {
         type: 'add',
         path: path.join(pathToContainer, 'reducer.ts'),
         templateFile: path.join(__dirname, 'reducer.ts.hbs'),
+        abortOnFail: true,
+      },
+      {
+        type: 'add',
+        path: path.join(pathToContainer, 'types.ts'),
+        templateFile: path.join(__dirname, 'types.ts.hbs'),
         abortOnFail: true,
       },
     ];

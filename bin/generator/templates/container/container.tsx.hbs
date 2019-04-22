@@ -15,6 +15,8 @@ import messages from './messages';
 {{/if}}
 {{#if wantRedux}}
 import { defaultAction } from './actions';
+import reducer from './reducer';
+import {IAppState} from '../../reducer';
 
 {{/if}}
 const H1 = styled.h1`
@@ -47,19 +49,24 @@ class {{ properCase name }} extends React.{{{ typeComponent }}}<Props, State> {
 }
 
 {{#if wantRedux}}
-const mapStateToProps = state => {
+const mapStateToProps = (state: IAppState) => {
   return {
-    {{lowerCase name}}: state.app
+    {{lowerCase name}}: state.{{lowerCase name}}
   }
 };
 
-export function mapDispatchToProps (dispatch) {
+export function mapDispatchToProps (dispatch: Dispatch) {
   return {
     dispatch
   }
 };
 
+export {defaultAction, reducer};
+export {IState} from './types'
+
 export default connect(mapStateToProps, mapDispatchToProps)({{ properCase name }});
+
 {{else}}
-export default {{ properCase name }};
+export {{ properCase name }};
+
 {{/if}}

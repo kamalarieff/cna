@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import home from '../app/containers/Home/reducer';
+import { reducer as home } from './containers/Home';
 
 export default function createReducer() {
   return combineReducers({

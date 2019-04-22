@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects';
-import Home from './containers/Home/saga';
+import { saga as Home } from './containers/Home';
 
 export default function* AppSaga() {
   yield all([Home()]);

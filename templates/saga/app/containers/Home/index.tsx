@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 import Article from '../../components/Article';
 import messages from './messages';
+import { fetchData } from './actions';
+import reducer from './reducer';
+import saga from './saga';
 
 const BottomZone = styled.div`
   margin-top: 30px;
@@ -76,4 +79,5 @@ class Home extends React.Component<Props, State> {
   }
 }
 
+export {fetchData, reducer, saga};
 export default Home;

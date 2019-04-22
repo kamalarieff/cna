@@ -1,3 +1,5 @@
+> Disclaimer: This project is forked from [Chotot CNA](https://github.com/ChoTotOSS/cna).
+
 # CNA (create next.js app)
 Create next.js web app based on [next.js](https://github.com/zeit/next.js/).
 
@@ -40,8 +42,12 @@ cna new my-app
 
 ```
 my-app
+├── __tests__/
+    └── index.spec.tsx
+    └── redux.spec.ts
+    └── saga.spec.ts
 ├── app/
-    └── assests/
+    └── assets/
     └── components/
     └── containers/
     └── hoc/
@@ -99,6 +105,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The app will automatically reload when code changes.
 
+## `yarn run test`
+
+Runs all the unit tests.
+
+## `yarn run test:watch`
+
+Runs all the unit tests while watching for any changes in the code.
+
+This is extremely useful during development.
+
 ## `npm run build` or `yarn run build`
 
 Builds app in production mode.
@@ -127,6 +143,12 @@ Now your app is ready to deploy.
  - [styled-components](https://www.styled-components.com/)
  - [react](https://facebook.github.io/react/)
  - [redux](http://redux.js.org/)
+ - [redux-saga](https://redux-saga.js.org)
+
+**Testing**
+- [jest](https://jestjs.io/)
+- [enzyme](https://airbnb.io/enzyme/)
+- [redux-saga-test-plan](http://redux-saga-test-plan.jeremyfairbank.com/)
  
 **Data source**
  - [Unofficial Hacker News API](https://github.com/cheeaun/node-hnapi) by cheeaun 
@@ -154,3 +176,7 @@ Some of the more popular and actively maintained ones are:
 * [sku](https://github.com/seek-oss/sku)
 * [gluestick](https://github.com/TrueCar/gluestick)
 * [create-next-app](https://github.com/segmentio/create-next-app)
+
+# Contribution
+
+Any contribution to the project is highly appreciated. Just make a pull request and we'll take a look at it.

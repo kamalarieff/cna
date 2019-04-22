@@ -19,7 +19,7 @@ module.exports = {
     },
   ],
   actions: function(data) {
-    const pathToContainer = path.join(process.cwd(), 'hocs');
+    const pathToContainer = path.join(process.cwd(), 'app/hocs');
 
     const actions = [
       {

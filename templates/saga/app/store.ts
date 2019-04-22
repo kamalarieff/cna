@@ -17,10 +17,7 @@ export const initStore = (initialState = _initialState) => {
     store = createStore(combineReducer(), initialState, composeWithDevTools(...enhancers));
   }
 
-  store.runSagaTask = () => {
-    store.sagaTask = sagaMiddleware.run(rootSaga);
-  };
+  store.sagaTask = sagaMiddleware.run(rootSaga);
 
-  store.runSagaTask();
   return store;
 };

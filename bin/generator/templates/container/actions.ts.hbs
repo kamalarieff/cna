@@ -5,9 +5,8 @@
  */
  
 import { DEFAULT_ACTION } from './constants';
+import { action } from 'typesafe-actions';
 
 export function defaultAction () {
-  return {
-    type: DEFAULT_ACTION
-  };
+  return action(DEFAULT_ACTION);
 }

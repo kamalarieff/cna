@@ -1,47 +1,33 @@
 import { FETCH_DATA, FETCH_DATA_SUCCESS, FETCH_DATA_FAIL } from './constants';
+import { HomeActions, IState } from './types';
 
-type State = {
-  fetching: Boolean;
-  data: [];
-};
-
-const initState: State = {
+const initState: IState = {
   fetching: false,
-  data: [],
+  data: []
 };
 
-type actionType = {
-  type: string;
-}
-
-type actionPayload = {
-  payload: { response };
-}
-
-type action = actionType & actionPayload;
-
-export default function home(state = initState, action: action) {
+export default function reducer(state: IState = initState, action: HomeActions) {
   switch (action.type) {
     case FETCH_DATA: {
       return {
         ...state,
-        fetching: true,
+        fetching: true
       };
     }
     case FETCH_DATA_SUCCESS: {
       const {
-        payload: { response },
+        payload: { response }
       } = action;
       return {
         ...state,
         fetching: false,
-        data: response,
+        data: response
       };
     }
     case FETCH_DATA_FAIL: {
       return {
         ...state,
-        fetching: false,
+        fetching: false
       };
     }
     default:
