@@ -40,7 +40,7 @@ module.exports = {
   actions: function(data) {
     const pathToContainer = path.join(
       process.cwd(),
-      'containers/{{properCase name}}'
+      'app/containers/{{properCase name}}'
     );
 
     const actions = [

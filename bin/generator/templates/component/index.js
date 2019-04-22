@@ -63,7 +63,7 @@ module.exports = {
     template = path.join(__dirname, template);
     const pathToComponent = path.join(
       process.cwd(),
-      'components/{{properCase name}}'
+      'app/components/{{properCase name}}'
     );
 
     const actions = [
