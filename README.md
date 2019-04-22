@@ -127,6 +127,12 @@ Now your app is ready to deploy.
  - [styled-components](https://www.styled-components.com/)
  - [react](https://facebook.github.io/react/)
  - [redux](http://redux.js.org/)
+ - [redux-saga](https://redux-saga.js.org)
+
+**Testing**
+- [jest](https://jestjs.io/)
+- [enzyme](https://airbnb.io/enzyme/)
+- [redux-saga-test-plan](http://redux-saga-test-plan.jeremyfairbank.com/)
  
 **Data source**
  - [Unofficial Hacker News API](https://github.com/cheeaun/node-hnapi) by cheeaun 
