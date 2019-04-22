@@ -23,7 +23,7 @@ class Index extends React.Component<Props, State> {
 
     return {
       isServer,
-      query,
+      query
     };
   }
 
@@ -39,7 +39,7 @@ class Index extends React.Component<Props, State> {
 
 const mapStateToProps = state => {
   return {
-    home: state.home,
+    home: state.home
   };
 };
 
