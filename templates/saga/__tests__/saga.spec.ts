@@ -6,10 +6,10 @@ import request from '../app/utils/request';
 import { expectSaga } from 'redux-saga-test-plan';
 import { throwError } from 'redux-saga-test-plan/providers';
 
-describe('redux-saga-test-plan', () => {
+describe('Redux sagas', () => {
   const payload = { payload: { query: 'asd' } };
   const someUrl = 'https://node-hnapi.herokuapp.com/news?0=a&1=s&2=d';
-  it('should expectSaga', () => {
+  it('should successfully fetch data', () => {
     const successData = {
       message: 'mock success message'
     };
@@ -23,7 +23,7 @@ describe('redux-saga-test-plan', () => {
       })
       .run();
   });
-  it('should throw an error', () => {
+  it('should throw an error when fail to fetch data', () => {
     const error = new Error('mock error message');
     return expectSaga(fetchData, payload)
       .provide([[call(request, someUrl), throwError(error)]])
