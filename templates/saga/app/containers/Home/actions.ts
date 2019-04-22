@@ -18,7 +18,7 @@ export function fetchDataSuccess(response: {}) {
   };
 }
 
-export function fetchDataFail(error: {}) {
+export function fetchDataFail(error: Error) {
   return {
     type: FETCH_DATA_FAIL,
     payload: {

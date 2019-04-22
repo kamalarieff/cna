@@ -6,7 +6,7 @@ import { fetchDataSuccess, fetchDataFail } from './actions';
 import { config } from '../../config';
 import request from '../../utils/request';
 
-function* fetchData({ payload: { query } }) {
+export function* fetchData({ payload: { query } }) {
   try {
     const queryArray = Object.keys(query).map(key => {
       return `${key}=${query[key]}`;
