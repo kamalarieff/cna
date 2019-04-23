@@ -10,7 +10,7 @@ const createDockerfile = require('./create-dockerfile');
 const createReadMe = require('./create-readme');
 const TEMPLATES = require('./template');
 
-module.exports = function(userYarn, selectedIndex) {
+module.exports = async function(userYarn, selectedIndex) {
   const appName = process.argv[3];
 
   const pathName = path.join(process.cwd(), appName);
@@ -27,6 +27,7 @@ module.exports = function(userYarn, selectedIndex) {
   if (!appNameExists) {
     fs.ensureDirSync(pathName);
     fs.copySync(templatesPath, pathName);
+    fs.copySync(templatesPath + '/gitignore', pathName + '/.gitignore');
 
     createPackageJson(appName);
     createDockerfile(appName);
