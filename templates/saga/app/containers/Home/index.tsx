@@ -79,5 +79,6 @@ class Home extends React.Component<Props, State> {
   }
 }
 
-export {fetchData, reducer, saga};
+export { fetchData, reducer, saga };
+export { IState } from './types';
 export default Home;
