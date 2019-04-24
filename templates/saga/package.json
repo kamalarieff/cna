@@ -36,8 +36,11 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-typescript": "^7.3.3",
+    "@types/enzyme": "^3.9.1",
     "@types/jest": "^24.0.11",
     "@types/next": "^8.0.3",
+    "@types/next-redux-saga": "^3.0.1",
+    "@types/next-redux-wrapper": "^2.0.2",
     "@types/react": "^16.8.13",
     "@types/react-redux": "^7.0.7",
     "@types/styled-components": "^4.1.14",
@@ -53,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "jest": "^24.7.1",
+    "prettier": "^1.17.0",
     "redux-saga-test-plan": "^4.0.0-beta.2",
     "typescript": "^3.4.4"
   }
