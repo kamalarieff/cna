@@ -39,19 +39,19 @@ type Props = {
   query: {
     page: number;
   };
-}
+};
 
-type State = {}
+type State = {};
 
 class Home extends React.Component<Props, State> {
   render() {
     const {
       home: { data },
-      query,
+      query
     } = this.props;
     const newQuery = {
       ...query,
-      page: query.page + 1,
+      page: query.page + 1
     };
     const dataLength = data.length;
 
