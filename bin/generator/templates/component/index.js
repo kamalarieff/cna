@@ -66,6 +66,8 @@ module.exports = {
       'app/components/{{properCase name}}'
     );
 
+    const pathToTests = path.join(process.cwd(), '__tests__');
+
     const actions = [
       {
         type: 'add',
@@ -77,6 +79,12 @@ module.exports = {
         type: 'add',
         path: path.join(pathToComponent, 'messages.ts'),
         templateFile: path.join(__dirname, 'messages.ts.hbs'),
+        abortOnFail: true,
+      },
+      {
+        type: 'append',
+        path: path.join(pathToTests, 'components.spec.tsx'),
+        templateFile: path.join(__dirname, 'test.tsx.hbs'),
         abortOnFail: true,
       },
     ];
