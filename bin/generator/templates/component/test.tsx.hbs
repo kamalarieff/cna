@@ -1,0 +1,13 @@
+
+describe('{{ properCase name }}', () => {
+  const expectedText = 'expectedText';
+
+  it('unit tests are a good idea. you should implement some.', () => {
+    expect(false).toBe(true);
+  });
+
+  it('should match the snapshot correctly', () => {
+    const component = shallow(<{{ properCase name }} />);
+    expect(component).toMatchSnapshot();
+  });
+});
